@@ -1,0 +1,185 @@
+.Left{
+    flex:1.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1{
+    font-size: 2.8em;
+    letter-spacing: 2px;
+}
+.Left h2{
+    font-size: 1.8em;
+    letter-spacing: 4px;
+    margin-left: 1%;
+    width: 90%;
+}
+.L-form{
+    text-align: start;
+    display: flex;
+    width: 90%;
+    max-height: 10%;
+}
+.L-form .select{
+    width: 10% !important;
+    background-color: #dfdfdf;
+    padding: 2px;
+    height: 50%;
+    line-height: 3em;
+    margin: 0 1%;
+}
+
+.Right{
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: transparent;
+}
+
+.Form{
+    display: flex;
+    z-index: 0;
+    overflow: none;
+    width: 65%;
+    margin-left: 16%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 230, 0.4);
+    border-radius: 15px;
+    flex-direction: column;
+    padding: 12px 0px;
+}
+
+.Inputs{
+    flex: 1;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    padding: 4%;
+    position:relative;
+}
+
+.F-left{
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%;
+    display:flex;
+    flex-wrap: wrap;
+    max-width:80%;
+    position:relative;
+    ;
+}
+
+.F-right{
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%;
+    display:flex;
+    max-width:80%;
+    position:relative;
+    
+}
+
+label{
+    flex: 1;
+    font-size: small;
+    font-weight: 400;
+    padding: 2%;
+}
+
+input{
+    flex:1;
+    width: 80%;
+    display:block;
+    line-height: 2.5;
+    padding-left: 3%;
+    border:none;
+    outline: none;
+    border-radius: .25em;
+}
+
+.DOB{
+    flex:1;
+    width: 80%;
+    min-height:3em;
+    display:block;
+    line-height: 2.5;
+    padding-left: 3%;
+    border:none;
+    outline: none;
+    border-radius: .25em;
+}
+
+select{
+    flex:1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+}
+    /* Remove IE arrow */
+select::-ms-expand {
+    display: none;
+}
+    /* Custom Select */
+.select {
+    padding-left: 2%;
+    position: relative;
+    width: 80%;
+    display: flex;
+    color: black;
+    line-height: 3;
+    background: #fff;
+    overflow: hidden;
+    border-radius: .25em;
+}
+select {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+    /* Arrow */
+.select::after {
+    content: '\25BC';
+    margin: auto;
+    right: 0;
+    position: absolute;
+    background: whitesmoke;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+    /* Transition */
+.select:hover::after {
+    color: #ff5BA0;
+}
+      
+
+.Form button{
+    width: 50%;
+    margin-left: 5%;
+    color: white;
+    box-sizing: border-box;
+    border: 2px solid #090909;
+    background-color: #090909;
+}
+.Form button:hover{
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #ff5BA0;
+    transition: ease-out .3s;
+}

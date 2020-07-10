@@ -1,38 +1,161 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+  background-image: url('./Images/white-background.svg'), url('./Images/couple.svg');
+  position: relative, absolute;
+  display:flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  height:100vh;
+  width: 100vw;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover, 60%;
+  background-color: #ff5BA0;
+  background-position: right bottom;
+}
+
+.page{
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: transparent;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: centers;
+  overflow-y: auto;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1024px)
+{   
+  .App{
+    flex-direction: column;
+    width:1020px;
+    height: 1380px;
+    overflow-x: hidden;
+    background-position: none;
+    background-size: cover;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar{
+    position: fixed;
+    background-color: #ff5BA0;
+  }
+  .navbar button{
+    display: none;
+  }
+  .logo{
+    max-width: 60%;
+    flex: 1;
+    display: flex;
+  }
+  .logo button{
+    flex: 1;
+    right: 0;
+    display: flex;
+  }
+  .page{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .Right{
+    flex:1;
+  }
+  .Left{
+    flex:1;
+  }
+  .L-form{
+    text-align: start;
+    display: flex;
+    width: 90%;
+    max-height: 900px;
+}
+.L-form .select{
+    min-width: 100px;
+    background-color: #dfdfdf;
+    padding: 2px;
+    height: 3em;
+    margin: 0 1%;
+}
+  .Form{
+    width: 600px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 760px)
+{
+  .App{
+    width: 760px;
+  }
+  
+}
+@media screen and (max-width: 445px)
+{ 
+  .App{
+    flex-direction: column;
+    width: 500px;
+    max-height: 900px;
+    overflow: hidden;
+    background-position: none;
+    background-size: cover;
+  }
+  .nav-link{
+    font-size: large;
+  }
+  .logo{
+    width: 250px;
+    margin-left: 5px;
+  }
+
+  .page{
+    margin-top: 15px;
+    min-height: 445px;
+    margin-left: 5px;
+    overflow-y: auto;
+  }
+  button{
+    display: none;
+  }
+  .Form{
+    margin: auto;
+    width: 90%;
+  }
+  .Form button{
+    display: inline-block;
+  }
+}
+
+
+@media screen and (max-width: 360px)
+{ 
+  .App{
+    flex-direction: column;
+    width: 360px;
+    overflow: hidden;
+    height: 650px;
+    background-position: none;
+    background-size: cover;
+  }
+  .page{
+    width: 360px;
+    overflow-y: auto;
+  }
+  .logo{
+    display: flex;
+  }
+  .logo button{
+    margin-left: 45%;
+    display: block;
+  }
+  .page{
+    margin-top: 15px;
+    min-height: 445px;
+  }
+  button{
+    display: none;
+  }
+  .Form{
+    margin: auto;
+    width: 90%;
+  }
+  .Form button{
+    display: inline-block;
   }
 }
